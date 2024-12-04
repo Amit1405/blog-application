@@ -2,7 +2,7 @@ const jwt=require("jsonwebtoken")
 const User=require("../models/user")
 exports.createToken=(user) => {
     const payload={
-        _id: user.userId,
+        _id: user._id,
         email: user.email,
     }
     const token=jwt.sign(payload,process.env.JWT_SECRET,{
@@ -11,6 +11,7 @@ exports.createToken=(user) => {
     return token;
 }
 exports.authToken=async (req,res,next) => {
+    console.log("toe",req)
     try {
         const token=req.header("x-auth-token");
         const decoded=jwt.verify(token,process.env.JWT_SECRET);

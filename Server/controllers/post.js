@@ -12,21 +12,21 @@ exports.getAllPost=async (req,res) => {
 exports.createPost=async (req,res) => {
     const {title,description,category}=req.body;
     const createdBy=req.user._id
-    //const {postImageURL}=req.file;
-    //console.log({postImageURL})
-    try {
-        await Post.create({title,description,category,createdBy})
-            .then(() => {
-                res.status(200).json({message: "Post Created successfully!"});
-            }).catch((err) => {
-                res.status(500).json({
-                    message:
-                        err?.message||"Some error occurred while creating the User."
-                });
-            })
-    } catch(error) {
-        res.status(500).send({message: err.message});
-    }
+
+    const post=new Post({
+        title: title,
+        description: description,
+        category: category,
+        createdBy: createdBy,
+        postImageURL:
+            req.protocol+'://'+req.get('host')+'/uploads/'+req.file.filename,
+    });
+    post
+        .save()
+        .then((savedPost) => {
+            res.status(200).json({message: "Post Created successfully!",savedPost: savedPost});
+        })
+        .catch((err) => console.log(err.message));
 }
 exports.getSpecificPost=async (req,res) => {
     try {

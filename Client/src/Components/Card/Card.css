@@ -1,0 +1,29 @@
+.card{
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+}
+.card-image{
+    height: 160px;
+    border-radius: 18px;
+}
+.card-bottom{
+    margin-bottom: 100px;
+}
+.card-title{
+    font-weight: bold;
+}
+.category-container{
+    background-color: white;
+    width: 45%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.category-container p{
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
+    text-align: center;
+}
+.view-details a{
+    text-decoration: none;
+}

@@ -1,0 +1,33 @@
+.notfound {
+    width: 100%;
+    text-align: center;
+    padding: 0px 15px;
+    line-height: 1.4;
+}
+.notfound .notfound-404 {
+    height: 200px;
+    line-height: 200px;
+}
+.notfound .notfound-404 h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 168px;
+    margin: 0px;
+    color: #ff508e;
+    text-transform: uppercase;
+}
+.notfound h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #222;
+    margin: 0;
+}
+.notfound a {
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #39b1cb;
+}

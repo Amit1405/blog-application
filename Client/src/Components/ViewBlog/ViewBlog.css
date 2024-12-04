@@ -1,0 +1,12 @@
+.card{
+    height: auto;
+}
+.card-layout{
+    max-width: 80%;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.delete-container{
+    padding: 10px;
+}
